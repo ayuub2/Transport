@@ -8,7 +8,7 @@ var Toolbar = React.createClass({
 
   render: function (){
     return (
-      <BasicSegment>
+      <BasicSegment style={{textAlign:"center"}}>
         <Button style={{width:"95px"}}  onClick={this.props.onClick.bind(null,"bus")}>Bus</Button>
         <Button style={{width:"95px"}}  onClick={this.props.onClick.bind(null,"train")}>Train</Button>
         <Button style={{width:"95px", paddingLeft:"12px"}}  onClick={this.props.onClick.bind(null,"timetable")}>Timetables</Button>
