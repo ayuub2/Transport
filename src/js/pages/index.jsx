@@ -10,17 +10,13 @@ var IndexPage = React.createClass({
     return {page: "bus"};
   },
 
-  handleClick: function(){
+  handleClick: function(page){
 
-    console.log("sending "+" page");
+    this.setState({page:page});
     //this.props.sendPage(ev.target.props.buttonCLciked);
 
   },
 
-
-  currentPage: function (currPage){
-    this.setState({page:currPage});
-  },
 
   render: function(){
     return (
@@ -29,7 +25,7 @@ var IndexPage = React.createClass({
           <ContentPage page={this.state.page}/>
         </BasicSegment>
         <BasicSegment style={{position:"absolute", bottom:"-40px", width:"100%"}}>
-         <Toolbar onClick={this.handleClick} sendPage={this.currentPage}/>
+         <Toolbar onClick={this.handleClick} />
         </BasicSegment>
       </BasicSegment>
     );
