@@ -6,7 +6,7 @@ var border = {borderBottom:"1px solid #ddd"};
 var Bus = React.createClass({
   render: function () {
     return (
-      <BasicSegment style={{fontFamily:"myFirstFont", fontSize:"20px"}} textAlign="center">
+      <BasicSegment style={{fontFamily:"myFirstFont", fontSize:"25px"}} textAlign="center">
         <table style={{width:"100%"}}>
           <tr>
             <th style={border}>Bus</th>
