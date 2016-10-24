@@ -21,7 +21,7 @@ var IndexPage = React.createClass({
   render: function(){
     return (
       <BasicSegment style={{width: "100%", height: "100%", padding: "0px"}}>
-        <BasicSegment style={{height:"90%", width:"100%"}}>
+        <BasicSegment style={{padding:"0px", height:"90%", width:"100%"}}>
           <ContentPage page={this.state.page}/>
         </BasicSegment>
         <BasicSegment style={{position:"absolute", bottom:"-40px", width:"100%"}}>
