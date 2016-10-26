@@ -6,8 +6,6 @@ var Train = require("./train");
 var Timetable = require("./timetable");
 var Time = require("./time");
 var busNumber = ["61","62","74","76","87"];
-var busObject = [];
-var allBuses = [];
 
 
 
@@ -35,6 +33,9 @@ var ContentPage = React.createClass({
   render: function (){
     var page = this.props.page;
     var transport = this.state.transport;
+    var busObject = [];
+    var allBuses = [];
+
     if(transport !== undefined){
       var list = transport.departures;
       for(var i in busNumber){
@@ -46,6 +47,7 @@ var ContentPage = React.createClass({
           allBuses.push(busObject[j][x.toString()]);
         }
       }
+      console.log(allBuses);
     }
     var contentDisplayed;
     if(page === "bus"){
