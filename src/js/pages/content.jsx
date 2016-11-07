@@ -12,11 +12,13 @@ var busNumber = ["61","62","74","76","87"];
 var ContentPage = React.createClass({
 
   getInitialState: function(){
-
     return {};
   },
 
-  componentDidMount: function(){this.getData();},
+  componentDidMount: function(){
+    this.getData();
+    setInterval(function(){ this.getData(); }.bind(this), 300000);
+  },
 
   getData: function(){
     request
@@ -47,7 +49,6 @@ var ContentPage = React.createClass({
           allBuses.push(busObject[j][x.toString()]);
         }
       }
-      console.log(allBuses);
     }
     var contentDisplayed;
     if(page === "bus"){
